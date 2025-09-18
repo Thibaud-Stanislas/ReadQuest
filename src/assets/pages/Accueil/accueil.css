@@ -1,0 +1,195 @@
+:root {
+  --rq-bg-1: #113b3f;
+  --rq-bg-2: #0b2f33;
+  --rq-gold: #d6b36a;
+  --rq-text: #e9ecef;
+
+  --rq-card-bg: rgba(6, 24, 27, 0.5);
+  --rq-card-bd: rgba(214, 179, 106, .35);
+  --rq-shadow: 0 10px 24px rgba(0,0,0,.28);
+}
+
+/* ==== GLOBAL ==== */
+.rq-home {
+  color: var(--rq-text);
+  background: linear-gradient(180deg, var(--rq-bg-1), var(--rq-bg-2));
+  min-height: 100dvh;
+}
+
+.grid {
+  display: grid;
+  gap: 24px;
+  padding: 24px;
+  max-width: 1180px;
+  margin-inline: auto;
+}
+
+@media (min-width: 980px) {
+  .rq-main.grid { grid-template-columns: 1.2fr 1fr; }
+  .rq-audience-and-book.grid { grid-template-columns: 1.2fr 1fr; }
+}
+
+/* ==== HERO ==== */
+.rq-hero {
+  text-align: center;
+  padding: 64px 20px 28px;
+  border-bottom: 2px solid var(--rq-gold);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.06),
+    0 8px 20px rgba(0,0,0,0.35);
+}
+
+.rq-title {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  font-size: clamp(40px, 6vw, 72px);
+  letter-spacing: 2px;
+  color: var(--rq-gold);
+  margin: 0 0 10px;
+}
+
+.rq-subtitle {
+  opacity: .95;
+  margin: 0 0 22px;
+}
+
+.rq-cta {
+   display: inline-flex;        /* Au lieu d'inline-block */
+  align-items: center;         /* Centre verticalement */
+  justify-content: center;     /* Centre horizontalement */
+  text-align: center;          /* Centre le texte si plusieurs lignes */
+  padding: 12px 18px;
+  padding: 12px 18px;
+  border-radius: 10px;
+  background: var(--rq-gold);
+  color: #0e1012;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform .15s ease, box-shadow .15s ease, opacity .2s ease;
+  box-shadow: 0 3px 10px rgba(0,0,0,.35);
+}
+.rq-cta:hover { transform: translateY(-1px); }
+.rq-cta:active { transform: translateY(0); }
+.rq-cta:focus-visible {
+  outline: 2px solid var(--rq-gold);
+  outline-offset: 3px;
+}
+.rq-cta--ghost {
+  background: transparent;
+  color: var(--rq-gold);
+  border: 1px solid var(--rq-gold);
+}
+
+/* ==== CARDS ==== */
+.rq-card {
+  background: var(--rq-card-bg);
+  border: 1px solid var(--rq-card-bd);
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: var(--rq-shadow), inset 0 1px 0 rgba(255,255,255,0.05);
+  backdrop-filter: blur(4px);
+  color: var(--rq-text);
+  font-size: 1.08rem;
+  line-height: 1.6;
+}
+
+.rq-card p { margin-bottom: 12px; }
+
+.rq-card h2,
+.rq-card h3 {
+  font-size: 1.35rem;
+  color: var(--rq-gold);
+  margin-top: 0;
+  margin-bottom: 12px;
+  letter-spacing: .5px;
+}
+
+/* ==== ABOUT ==== */
+.rq-about {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 80px 1fr;
+  align-items: start;
+}
+.rq-avatar img {
+  width: 80px; height: 80px;
+  border-radius: 50%;
+  border: 2px solid var(--rq-gold);
+  object-fit: cover;
+}
+.rq-sign {
+  color: var(--rq-gold);
+  font-family: "Cormorant Garamond", serif;
+}
+
+/* ==== NEWS ==== */
+.rq-news {
+  background: rgba(6, 24, 27, 0.7);
+  border: 1px solid var(--rq-gold);
+  font-size: 1.12rem;
+  box-shadow: 0 12px 28px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,0.06);
+}
+.rq-news .rq-list {
+  list-style: none;
+  margin: 0; padding: 0;
+  display: grid; gap: 14px;
+}
+.rq-news .rq-note {
+  margin-top: 20px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--rq-gold);
+}
+
+/* ==== AUDIENCE ==== */
+.rq-audience-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.rq-audience-item {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 20px 12px;
+  border: 1px solid rgba(214, 179, 106, .25);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, .02);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.rq-audience-item:hover { transform: translateY(-2px); box-shadow: 0 8px 16px rgba(0,0,0,.25); }
+.rq-audience-item p { font-size: 1.06rem; margin-top: 8px; }
+.rq-audience-item .icon img {
+  max-width: 80px; height: auto; display: block;
+}
+
+/* ==== EVENT ==== */
+.rq-event { display: grid; gap: 10px; align-content: start; }
+.rq-event-title { margin: 0 0 6px; }
+.rq-event-body { display: grid; gap: 10px; }
+.rq-event-line { margin: 0; }
+
+/* ==== BOOK (placeholder si tu ajoutes la cover plus tard) ==== */
+.rq-book-cover {
+  position: relative;
+  width: 180px; height: 240px;
+  margin: 12px auto 0; perspective: 800px;
+}
+.rq-book-cover img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid var(--rq-gold);
+  box-shadow: 0 16px 30px rgba(0,0,0,.45);
+  transform: rotateY(-8deg) rotateZ(-1deg);
+}
+.rq-ribbon {
+  position: absolute; bottom: 8px; left: 8px;
+  background: var(--rq-gold); color: #081c1e;
+  font-weight: 700; padding: 6px 10px; border-radius: 6px;
+}
+
+/* ==== ACCESSIBILITÉ & MOTION ==== */
+@media (prefers-reduced-motion: reduce) {
+  .rq-cta, .rq-audience-item { transition: none; }
+}

@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Cormorant+Garamond:wght@400;500&display=swap');
+
+:root {
+  --rq-bg-1: #113b3f;
+  --rq-bg-2: #0b2f33;
+  --rq-gold: #d6b36a;
+  --rq-text: #e9ecef;
+  --rq-muted: #b8c1c6;
+  --rq-danger: #ffb3b3;
+}
+
+.rq-auth {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(180deg, var(--rq-bg-1), var(--rq-bg-2));
+  color: var(--rq-text);
+  padding: 24px;
+}
+
+.rq-auth-card {
+  max-width: 500px;
+  width: 100%;
+  background: rgba(7, 29, 32, 0.75);
+  border: 1px solid rgba(214,179,106,0.3);
+  border-radius: 16px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.45);
+  padding: 40px 28px;
+  backdrop-filter: blur(6px);
+}
+
+.rq-logo {
+  font-family: 'Cinzel', serif;
+  color: var(--rq-gold);
+  font-size: 44px;
+  text-align: center;
+  margin: 0 0 8px;
+}
+
+.rq-auth-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  text-align: center;
+  font-size: 28px;
+  margin: 0 0 28px;
+  color: var(--rq-gold);
+}
+
+.rq-auth-form {
+  display: grid;
+  gap: 18px;
+}
+
+.rq-field {
+  display: grid;
+  gap: 8px;
+}
+
+.rq-field > span {
+  color: var(--rq-muted);
+  font-size: 14px;
+}
+
+.rq-field input {
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.02);
+  color: var(--rq-text);
+  border: 1px solid rgba(214,179,106,0.25);
+  outline: none;
+}
+
+.rq-field input:focus {
+  border-color: var(--rq-gold);
+  box-shadow: 0 0 0 4px rgba(214,179,106,0.18);
+}
+
+.rq-link {
+  color: var(--rq-gold);
+  text-decoration: none;
+}
+
+.rq-link:hover {
+  text-decoration: underline;
+}
+
+.rq-link.small {
+  font-size: 13px;
+  justify-self: end;
+}
+
+.rq-error {
+  background: rgba(225, 60, 60, 0.15);
+  border: 1px solid rgba(225, 60, 60, 0.35);
+  color: var(--rq-danger);
+  padding: 10px 12px;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+.rq-btn {
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+}
+
+.rq-btn-gold {
+  background: linear-gradient(180deg, #e0bb73, #c99d4e);
+  color: #102829;
+}
+
+.rq-btn-gold:hover {
+  opacity: 0.9;
+}
+
+.rq-auth-switch {
+  text-align: center;
+  margin-top: 18px;
+  color: var(--rq-muted);
+}
